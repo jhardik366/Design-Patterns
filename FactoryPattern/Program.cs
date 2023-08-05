@@ -4,8 +4,15 @@ class Program
 {
     public static void Main()
     {
-        ShapeFactory shapeFactory = new ShapeFactory();
-        IShape shape = shapeFactory.GetShape("Circle");
-        shape.Draw();
+        try
+        {
+            ShapeFactory shapeFactory = new ShapeFactory();
+            IShape shape = shapeFactory.GetShape("Circles");
+            shape.Draw();
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
     }
 }
